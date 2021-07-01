@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./index.css" />
+        <title>Basic JS Course. Lesson 4</title>
+    </head>
+    <body>
+        <section class="lesson1">
+            <div class="container">
+                <div class="heading">
+                    <h1>Решение задания к уроку 4</h1>
+                    * результаты выполнения скриптов в консоли
+                </div>
+                <div>
+                    <h3>Задание 1</h3>
+                    <pre><code>const numToObject = (num) => {
+    if (num < 0 || num > 999) {
+        console.error('Bad number');
+        return {};
+    }
+
+    const digits = String(num).split('').reverse();
+    const keys = ['units', 'tens', 'hundreds'];
+
+    return keys.reduce((acc, cur, i) => {
+        acc[cur] = +digits[i] || 0;
+        return acc;
+    }, {});
+};
+                    </code></pre>
+                </div>
+
+                <div>
+                    <h3>Задание 2</h3>
+                    <pre><code>class Cart {
+    constructor() {
+        this.cartItems = [];
+    }
+
+    addToCart(productPayload) {
+        const existItem = this.cartItems.find(
+            (item) => item.id === productPayload.id
+        );
+
+        if (existItem) {
+            this.cartItems = this.cartItems.map((item) =>
+                item.id === existItem.id ? productPayload : item
+            );
+        } else {
+            this.cartItems = [...this.cartItems, productPayload];
+        }
+    }
+
+    removeFromCart(productId) {
+        this.cartItems = this.cartItems.filter((item) => item.id !== productId);
+    }
+
+    clearCart() {
+        this.cartItems = [];
+    }
+
+    getCartValue() {
+        return this.cartItems.reduce(
+            (acc, cur) => cur.price * cur.qty + acc,
+            0
+        );
+    }
+}
+                    </code></pre>
+                </div>
+                <div>
+                    <h3>Задание 3</h3>
+                    <pre><code>class Product {
+    constructor() {
+        this.catalog = [];
+    }
+
+    addProduct(name, brand, category, description, price, countInStock) {
+        const product = {
+            id: uuidv4(),
+            name,
+            brand,
+            category,
+            description,
+            price,
+            countInStock,
+        };
+        this.catalog = [...this.catalog, product];
+
+        return product;
+    }
+
+    getProducts() {
+        return this.catalog;
+    }
+
+    getProductById(id) {
+        return this.catalog.find((item) => item.id === id);
+    }
+}
+                    </code></pre>
+                </div>
+            </div>
+        </section>
+
+        <script src="helpers.js"></script>
+        <script src="task-1.js"></script>
+        <script src="task-2.js"></script>
+        <script src="task-3.js"></script>
+    </body>
+</html>
