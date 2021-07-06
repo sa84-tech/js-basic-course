@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Basic JS Course. Lesson 1</title>
+    </head>
+    <body>
+        <section class="lesson1">
+            <div class="container">
+                <div>
+                    <h1>Решение задания к уроку 2</h1>
+                    * результаты выполнения скриптов в консоли
+                </div>
+                <div>
+                    <h3>Задание 1</h3>
+                    <p>
+                        1. К переменной a со значенимем 1 применяется оператор
+                        инкремента в префиксной форме. Значение этой переменной
+                        увеличивается на 1, затем приваивается переменной с. (с
+                        = 2)
+                    </p>
+                    <p>
+                        2. К переменной b со значенимем 1 применяется оператор
+                        инкремента в постфиксной форме. Текущее значение этой
+                        переменной присваивается переменной d, затем
+                        увеличивается на 1. (d = 1)
+                    </p>
+                    <p>
+                        3. Значение переменной а (2) увеличивается на 1 и
+                        прибавляется к 2, итоговый результат (5) присваивается
+                        переменной с. (c = 5)
+                    </p>
+                    <p>
+                        4. К 2 прибавляется текущее значение переменной b (2),
+                        результат присваивается переменной d, затем значение b
+                        увеличивается на 1. (d = 4)
+                    </p>
+                    <p>5. Текущие значения переменных a и b равны 3</p>
+                </div>
+
+                <div>
+                    <h3>Задание 2</h3>
+                    <p>x = 5</p>
+                </div>
+
+                <div>
+                    <h3>Задание 3</h3>
+                    <p>x = 5</p>
+                </div>
+
+                <div>
+                    <h3>Задание 4</h3>
+                    <pre><code>switch(num) {
+    case 1:
+        console.log(1);
+    case 2:
+        console.log(2);
+    case 3:
+        console.log(3);
+    case 4:
+        console.log(4);
+    case 5:
+        console.log(5);
+    case 6:
+        console.log(6);
+    case 7:
+        console.log(7);
+    case 8:
+        console.log(8);
+    case 9:
+        console.log(9);
+    case 10:
+        console.log(10);
+    case 11:
+        console.log(11);
+    case 12:
+        console.log(12);
+    case 13:
+        console.log(13);
+    case 14:
+        console.log(14);
+    default:
+        console.log(15);
+}
+                    </code></pre>
+                </div>
+
+                <div>
+                    <h3>Задание 5</h3>
+                    <pre><code>const adition = (a, b) => a + b;
+const substraction = (a, b) => a - b;
+const multiplication = (a, b) => a * b;
+const division = (a, b) => a / b;
+                    </code></pre>
+                </div>
+
+                <div>
+                    <h3>Задание 6</h3>
+                    <pre><code>const mathOperation = (arg1, arg2, operation) => {
+    if (
+        (arg1 == 0 || arg1) &&
+        (arg2 == 0 || arg2) &&
+        operation &&
+        !(operation === 'div' && arg2 === 0)
+    ) {
+        switch (operation) {
+            case 'add':
+                return +arg1 + +arg2;
+            case 'sub':
+                return arg1 - arg2;
+            case 'mul':
+                return arg1 * arg2;
+            case 'div':
+                return arg1 / arg2;
+        }
+    } else {
+        return null;
+    }
+};
+                    </code></pre>
+                </div>
+
+                <div>
+                    <h3>Задание 7</h3>
+                    <pre><code>console.log( null > 0 );  // false
+console.log( null == 0 ); // false
+console.log( null >= 0 ); // true
+                    </code></pre>
+                    <p>
+                        Сравнения переводят null в число и рассматривают его как
+                        0
+                    </p>
+                    <p>
+                        Нестрогое равенство null ни к чему не приводит и оно
+                        будет равно только самому себе
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Задание 8</h3>
+                    <pre><code>const power = (val, pow) => {
+    if (pow <= 1) {
+        return val;
+    }
+    return val * power(val, pow - 1);
+};
+                    </code></pre>
+                </div>
+            </div>
+        </section>
+
+        <script src="task-1.js"></script>
+        <script src="task-2.js"></script>
+        <script src="task-3.js"></script>
+        <script src="task-4.js"></script>
+        <script src="task-5.js"></script>
+        <script src="task-6.js"></script>
+        <script src="task-7.js"></script>
+        <script src="task-8.js"></script>
+    </body>
+</html>
