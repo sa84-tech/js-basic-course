@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./index.css">
+        <title>Basic JS Course. Lesson 3</title>
+    </head>
+    <body>
+        <section class="lesson1">
+            <div class="container">
+                <div class="heading">
+                    <h1>Решение задания к уроку 3</h1>
+                    * результаты выполнения скриптов в консоли
+                </div>
+                <div>
+                    <h3>Задание 1</h3>
+                    <pre><code>let x = 2;
+while (x <= 100) {
+    let isSimple = true;
+    let y = 2;
+    while(y < x) {
+        if (x % y === 0) {
+            isSimple = false;
+            break;
+        };
+        y++;
+    }
+    if (isSimple) console.log(x);
+    x++;
+};
+                    </code></pre>
+                </div>
+
+                <div>
+                    <h3>Задание 2</h3>
+                    <p>a)</p>
+                    <pre><code>const cartItems = [
+    {id: 1, name: 'Брюки BOCHETTI', qty: 3, price: 2800.0},
+    {id: 2, name: 'Комплект носков', qty: 10, price: 324.0},
+    {id: 3, name: 'Джемпер Gloria Jeans', qty: 3, price: 899.0},
+    {id: 4, name: 'Водолазка Kurdi', qty: 2, price: 1098.0},
+];
+                    </code></pre>
+                    <p>b)</p>
+                    <pre><code>const countBasketPrice = (cart) => 
+    cart.reduce((acc, cur) => cur.price * cur.qty + acc, 0);
+                    </code></pre>
+                </div>
+                
+                <div>
+                    <h3>Задание 3</h3>
+                    <pre><code>
+for(let i = 0; i<=9; console.log(i++));
+                    </code></pre>
+                </div>
+
+                <div>
+                    <h3>Задание 4</h3>
+                    <pre><code>for(let i = 1; i<=21; i++) {
+    let str = '';
+    for(let j=0; j < i; j++) {
+        str += 'x';
+    }
+    console.log(str);
+};
+
+                    </code></pre>
+                </div>
+            </div>
+        </section>
+
+        <script src="task-1.js"></script>
+        <script src="task-2.js"></script>
+        <script src="task-3.js"></script>
+        <script src="task-4.js"></script>
+    </body>
+</html>
+
