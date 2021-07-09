@@ -1,3 +1,5 @@
+'use strict';
+
 const chessBoard = {
     wrapper: document.getElementById('wrapper'),
 
@@ -18,7 +20,6 @@ const chessBoard = {
         else {
             if (this.isBlack(row, col)) return 'black';
 
-            
             return 'white';
         }
     },
