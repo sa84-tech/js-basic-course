@@ -1,0 +1,26 @@
+.white,
+.black {
+    width: 50px;
+    height: 50px;
+    border: 1px solid grey;
+}
+
+.black {
+    background-color: rgb(80, 80, 80);
+}
+
+.letter,
+.number {
+    font-weight: 600;
+    color: rgb(80, 80, 80);
+    text-align: center;
+}
+
+.number {
+    width: 1.2rem;
+}
+
+.board {
+    border: solid 1px rgb(80, 80, 80);
+    margin: 0 auto;
+}
